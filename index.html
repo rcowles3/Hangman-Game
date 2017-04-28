@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hangman Game - Ryan Cowles</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+</head>
+
+<body>
+    <!-- Psuedo Code for Hangman Game 
+    1. First, create HTML for hangman app.  
+    2. Declare variables for available words to guess. 
+        a. Variable to store wins, current word, guesses remaining, letters already guessed, and the blanks that hold the selected word.        
+    3. Computer generate a random word from array index to display as current word. 
+    4. Send random word chosen from array into current word on the document
+
+
+    -->
+    <!-- When we are ready to start playing our game, our HTML will be placed into this div. -->
+    <div id="game">
+        <h1>Hang Man Game!</h1>
+        <p>Wins: <span id="wins"></span></p>
+        <p>Current Word: <span id="current-word"></span></p>
+        <p>Number of guesses remaining: <span id="guess-remain"></span></p>
+        <p>Letters already guessed: <span id="user-guess"></span></p>
+    </div>
+
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+</body>
+
+</html>
