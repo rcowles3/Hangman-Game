@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Hangman Game - Ryan Cowles</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
 </head>
 
 <body>
@@ -21,13 +21,14 @@
     -->
     <!-- When we are ready to start playing our game, our HTML will be placed into this div. -->
     <div id="game">
-        <h1>Hang Man Game!</h1>
-        <p>Wins: <span id="wins"></span></p>
-        <p>Current Word: <span id="current-word"></span></p>
-        <p>Number of guesses remaining: <span id="guess-remain"></span></p>
-        <p>Letters already guessed: <span id="user-guess"></span></p>
+        <div class="jumbotron">
+            <h1>Hang Man Game!</h1>
+            <p>Wins: <span id="wins"></span></p>
+            <p>Current Word: <span id="current-word"></span></p>
+            <p>Number of guesses remaining: <span id="guess-remain"></span></p>
+            <p>Letters already guessed: <span id="user-guess"></span></p>
+        </div>
     </div>
-
     <script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
 

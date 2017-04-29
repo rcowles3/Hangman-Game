@@ -3,14 +3,14 @@
 // ===============================================
 
 // Array of word choices for Hang Man. 
-var words = ["Dbacks", "Yankees", "Athletics", "Cardinals", "Dodgers", "Phillies", "Orioles", "Giants"];
+var words = ["Dbacks", "Yankees", "Athletics", "Cardinals", "Dodgers", "Phillies", "Orioles", "Giants", "Rangers", "Angels", "Braves", "Indians", "Mets", "Twins", "Tigers", "Red Sox", "White Sox", "Blue Jays", "Royals", "Reds", "Cubs", "Marlins", "Astros", "Rockies", "Devil Rays", "Royals", "Pirates", "Mariners", "Expos", "Padres", "Nationals"];
 var selectedWord = "";
 // Array for the letters in the chosen word.
 var lettersInWord = [];
 var numBlanks = 0;
 // Start the game with 0 wins, 10 guesses
 var wins = 0;
-var guessRemain = 10;
+var guessRemain = 15;
 // Wrong guesses, and blanks for correct guesses.
 var wrongLetters = [];
 var correctAndBlanks = [];
@@ -32,7 +32,7 @@ function startGame() {
     // Reset game variables
     correctAndBlanks = [];
     wrongLetters = [];
-    guessRemain = 10;
+    guessRemain = 15;
 
     for (var i = 0; i < numBlanks; i++) {
         correctAndBlanks.push("_");
@@ -90,9 +90,10 @@ function roundDone() {
 }
 
 // MAIN PROCESS
+// ================================================
+// ================================================
 // Initiate code
 startGame();
-
 // Functions performed on key click
 document.onkeyup = function(event) {
     var letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
