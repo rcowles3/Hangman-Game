@@ -10,7 +10,7 @@ var lettersInWord = [];
 var numBlanks = 0;
 // Start the game with 0 wins, 10 guesses
 var wins = 0;
-var guessRemain = 15;
+var guessRemain = 12;
 // Wrong guesses, and blanks for correct guesses.
 var wrongLetters = [];
 var correctAndBlanks = [];
@@ -32,7 +32,7 @@ function startGame() {
     // Reset game variables
     correctAndBlanks = [];
     wrongLetters = [];
-    guessRemain = 15;
+    guessRemain = 12;
 
     for (var i = 0; i < numBlanks; i++) {
         correctAndBlanks.push("_");
