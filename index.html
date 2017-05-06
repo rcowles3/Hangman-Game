@@ -16,8 +16,10 @@
         a. Variable to store wins, current word, guesses remaining, letters already guessed, and the blanks that hold the selected word.        
     3. Computer generate a random word from array index to display as current word. 
     4. Send random word chosen from array into current word on the document
-
-
+    5. Function to record user input from keyboard
+    6. If user input matches current word, then a letter will display. 
+    7. If letter does not match word, guess remain will decrease by 1.
+    8. Once user guesses word, wins counter will increase, else, alerted to try again. 
     -->
     <!-- When we are ready to start playing our game, our HTML will be placed into this div. -->
     <div id="game">
@@ -25,8 +27,8 @@
             <h1>Hang Man Game!</h1>
             <p>Wins: <span id="wins"></span></p>
             <p>Current Word: <span id="current-word"></span></p>
-            <p>Number of guesses remaining: <span id="guess-remain"></span></p>
-            <p>Letters already guessed: <span id="user-guess"></span></p>
+            <p>Number Of Guesses Remaining: <span id="guess-remain"></span></p>
+            <p>Letters Already Guessed: <span id="user-guess"></span></p>
         </div>
     </div>
     <script type="text/javascript" src="assets/javascript/game.js"></script>

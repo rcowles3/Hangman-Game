@@ -3,7 +3,8 @@
 // ===============================================
 
 // Array of word choices for Hang Man. 
-var words = ["Dbacks", "Yankees", "Athletics", "Cardinals", "Dodgers", "Phillies", "Orioles", "Giants", "Rangers", "Angels", "Braves", "Indians", "Mets", "Twins", "Tigers", "Red Sox", "White Sox", "Blue Jays", "Royals", "Reds", "Cubs", "Marlins", "Astros", "Rockies", "Devil Rays", "Royals", "Pirates", "Mariners", "Expos", "Padres", "Nationals"];
+var words = ["dbacks", "yankees", "athletics", "cardinals", "dodgers", "phillies", "orioles", "giants", "rangers", "angels", "braves", "indians", "mets", "twins", "tigers", "royals", "reds", "cubs", "marlins", "astros", "rockies", "royals", "pirates", "mariners", "expos", "padres", "nationals"];
+// var words = ["cubs", "reds"]
 var selectedWord = "";
 // Array for the letters in the chosen word.
 var lettersInWord = [];
@@ -78,8 +79,11 @@ function roundDone() {
 
     // Checks to see if user wins
     if (lettersInWord.toString() == correctAndBlanks.toString()) {
+        // console.log(lettersInWord.toString() + " " + correctAndBlanks.toString());
         document.getElementById("wins").innerHTML = wins;
         wins++;
+        alert("You Win! Play Again");
+        startGame();
     }
 
     // Checks to see if you lost
