@@ -9,8 +9,9 @@ var selectedWord = "";
 // Array for the letters in the chosen word.
 var lettersInWord = [];
 var numBlanks = 0;
-// Start the game with 0 wins, 10 guesses
+// Start the game with 0 wins/loss, 10 guesses
 var wins = 0;
+var loss = 0;
 var guessRemain = 12;
 // Wrong guesses, and blanks for correct guesses.
 var wrongLetters = [];
@@ -41,9 +42,11 @@ function startGame() {
     }
 
     // Push javascript to modify html
-    document.getElementById("current-word").innerHTML = correctAndBlanks.join(" ");
     document.getElementById("guess-remain").innerHTML = guessRemain;
+    document.getElementById("current-word").innerHTML = correctAndBlanks.join(" ");
+    document.getElementById("user-guess").innerHTML = wrongLetters.join(" ");
     document.getElementById("wins").innerHTML = wins;
+    document.getElementById("loss").innerHTML = loss;
 }
 
 // Function to check if letter guessed already exists
@@ -53,7 +56,7 @@ function checkLetters(lettersGuessed) {
 
     for (var i = 0; i < numBlanks; i++) {
         if (selectedWord[i] == lettersGuessed) {
-        lettersInWord = true;
+            lettersInWord = true;
         }
     }
     // Checks location of letter and populates array with letter if found
@@ -69,13 +72,15 @@ function checkLetters(lettersGuessed) {
         wrongLetters.push(lettersGuessed);
         guessRemain--;
     }
+
+
 }
 
 function roundDone() {
     // Modify HTML
     document.getElementById("guess-remain").innerHTML = guessRemain;
     document.getElementById("current-word").innerHTML = correctAndBlanks.join(" ");
-    document.getElementById("user-guess").innerHTML =wrongLetters.join(" ");
+    document.getElementById("user-guess").innerHTML = wrongLetters.join(" ");
 
     // Checks to see if user wins
     if (lettersInWord.toString() == correctAndBlanks.toString()) {
@@ -88,6 +93,7 @@ function roundDone() {
 
     // Checks to see if you lost
     else if (guessRemain === 0) {
+        loss++;
         alert("You Lose, Try Again");
         startGame();
     }
@@ -101,6 +107,11 @@ startGame();
 // Functions performed on key click
 document.onkeyup = function(event) {
     var letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
-    checkLetters(letterGuessed);
-    roundDone();
+    // Checks if already guessed letter
+    if (letterGuessed == wrongLetters) {
+        alert("Already guessed that letter, please try again.");
+    } else {
+        checkLetters(letterGuessed);
+        roundDone();
+    }
 }
