@@ -1,0 +1,25 @@
+{
+  "name": "hangman",
+  "version": "1.0.0",
+  "description": "Hangman game.",
+  "main": "index.js",
+  "dependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "startbootstrap-simple-sidebar": "^4.0.0-alpha"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rcowles3/Hangman-Game.git"
+  },
+  "author": "Ryan Cowles",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rcowles3/Hangman-Game/issues"
+  },
+  "homepage": "https://github.com/rcowles3/Hangman-Game#readme"
+}

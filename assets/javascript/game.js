@@ -38,7 +38,7 @@ function startGame() {
 
     for (var i = 0; i < numBlanks; i++) {
         correctAndBlanks.push("_");
-        console.log(correctAndBlanks);
+        // console.log(correctAndBlanks);
     }
 
     // Push javascript to modify html
@@ -72,8 +72,6 @@ function checkLetters(lettersGuessed) {
         wrongLetters.push(lettersGuessed);
         guessRemain--;
     }
-
-
 }
 
 function roundDone() {
